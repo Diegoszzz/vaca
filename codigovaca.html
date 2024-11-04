@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaca en HTML y CSS</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://previews.123rf.com/images/ddraw/ddraw1602/ddraw160200014/52577939-paisaje-divertido-con-el-tractor-y-el-campo-de-ma%C3%ADz-ilustraci%C3%B3n-vectorial-de-dibujos-animados.jpg'); /* Fondo personalizado */
+            background-size: cover; 
+            background-position: center; 
+        }
+        .vaca {
+            position: relative;
+            width: 300px;
+            height: 160px;
+            background-color: white;
+            border-radius: 60px 60px 100px 100px; 
+            box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.2); 
+        }
+        .cabeza {
+            position: absolute;
+            top: 40px;
+            left: -90px; 
+            width: 80px;
+            height: 90px;
+            background-color: white;
+            border-radius: 50%; 
+            border: 3px solid #555; 
+            box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .ojo {
+            position: absolute;
+            top: 25px;
+            width: 15px;
+            height: 15px;
+            background-color: black; 
+            border-radius: 50%; 
+        }
+        .ojo.izquierdo { left: 15px; }
+        .ojo.derecho { right: 15px; }
+        .mancha {
+            position: absolute;
+            background-color: black; 
+            border-radius: 50%; 
+        }
+        .mancha1 { width: 60px; height: 50px; top: 40px; left: 100px; }
+        .mancha2 { width: 40px; height: 30px; top: 80px; left: 180px; }
+        .mancha3 { width: 50px; height: 40px; top: 100px; left: 50px; }
+        .oreja {
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            background-color: #f2e6d9; 
+            border-radius: 50%; 
+            box-shadow: inset -1px -1px 2px rgba(0, 0, 0, 0.2); 
+        }
+        .oreja.izquierda { top: 20px; left: -25px; transform: rotate(-20deg); }
+        .oreja.derecha { top: 20px; left: 65px; transform: rotate(20deg); }
+        .cacho {
+            position: absolute;
+            width: 10px;
+            height: 25px;
+            background-color: #b3b3b3; 
+            border-radius: 50%; 
+        }
+        .cacho.izquierdo { top: -10px; left: 5px; transform: rotate(-25deg); }
+        .cacho.derecho { top: -10px; right: 5px; transform: rotate(25deg); }
+        .cola {
+            position: absolute;
+            width: 10px;
+            height: 70px;
+            background-color: black; 
+            top: 30px;
+            right: -10px;
+            border-radius: 5px;
+            transform-origin: top; 
+            animation: moverCola 1s infinite alternate; 
+        }
+        @keyframes moverCola {
+            0% { transform: rotate(10deg); }
+            100% { transform: rotate(-10deg); }
+        }
+        .hocico {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            width: 40px;
+            height: 25px;
+            background-color: #f2e6d9; 
+            border-radius: 20px; 
+            box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2); 
+        }
+        .nariz {
+            position: absolute;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            background-color: black; 
+            border-radius: 50%; 
+        }
+        .nariz.izquierda { left: 10px; }
+        .nariz.derecha { right: 10px; }
+        .pata {
+            position: absolute;
+            width: 20px;
+            height: 70px;
+            background-color: #555; 
+            bottom: -10px; 
+            border-radius: 10px 10px 0 0; 
+            box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.3); 
+        }
+        .pata.izquierda-trasera { left: 50px; }
+        .pata.derecha-trasera { right: 50px; }
+        .pata.izquierda-delantera { left: 110px; }
+        .pata.derecha-delantera { right: 110px; }
+        .pezuña {
+            position: absolute;
+            width: 20px;
+            height: 10px;
+            background-color: black; 
+            border-radius: 10px 10px 0 0; 
+            bottom: -10px; 
+        }
+        .pezuña.izquierda-trasera { left: 50px; }
+        .pezuña.derecha-trasera { right: 50px; }
+        .pezuña.izquierda-delantera { left: 110px; }
+        .pezuña.derecha-delantera { right: 110px; }
+    </style>
+</head>
+<body>
+    <div class="vaca">
+        <div class="cabeza">
+            <div class="oreja izquierda"></div>
+            <div class="oreja derecha"></div>
+            <div class="cacho izquierdo"></div>
+            <div class="cacho derecho"></div>
+            <div class="ojo izquierdo"></div>
+            <div class="ojo derecho"></div>
+            <div class="hocico">
+                <div class="nariz izquierda"></div>
+                <div class="nariz derecha"></div>
+            </div>
+        </div>
+        <div class="mancha mancha1"></div>
+        <div class="mancha mancha2"></div>
+        <div class="mancha mancha3"></div>
+        <div class="cola"></div>
+        <div class="pata izquierda-trasera"></div>
+        <div class="pata derecha-trasera"></div>
+        <div class="pata izquierda-delantera"></div>
+        <div class="pata derecha-delantera"></div>
+        <div class="pezuña izquierda-trasera"></div>
+        <div class="pezuña derecha-trasera"></div>
+        <div class="pezuña izquierda-delantera"></div>
+        <div class="pezuña derecha-delantera"></div>
+    </div>
+</body>
+</html>
